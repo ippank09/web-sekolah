@@ -105,4 +105,17 @@ class Home extends CI_Controller {
 		);
 		$this->load->view('layout/v_wrapper', $data, FALSE);
 	}
+
+	public function detail_galeri($id_galeri){
+	
+		$data = array(
+			  'title' => 'Galeri Foto',
+			  'foto' =>$this->m_home->detail_galeri($id_galeri),
+			  'nama_galeri' => $this->m_home->nama_galeri($id_galeri),
+			  'isi' =>'v_detail_galeri'	
+		  );
+		  $this->load->view('layout/v_wrapper', $data, FALSE);
+	  }
+
+
 }

@@ -200,5 +200,22 @@ class Galeri extends CI_Controller{
             );
             $this->load->view('admin/layout/v_wrapper', $data, FALSE);
     }
+
+    public function delete_foto($id_galeri, $id_foto)
+    {
+       $foto = $this->m_galeri->detail_foto($id_foto);
+       if ($foto->foto != "") {
+           unlink('./foto/' . $galeri->foto);
+       }
+
+       $data = array(
+           'id_foto'  => $id_foto,
+       );
+
+
+       $this->m_galeri->delete_foto($data);
+       $this->session->set_flashdata('pesan', 'Data Berhasil Dihapus!');
+       redirect('galeri/add_foto/'.$id_galeri);
+   }
      
  }        

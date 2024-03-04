@@ -51,7 +51,7 @@
                 <label for=""><?= $value->ket_foto?></label>
                 <img src="<?= base_url('foto/'). $value->foto ?>" height="200" width="200" alt="">
                 <br>
-                <a href="" class="btn btn-danger btn-danger btn-xs center"><i class="fa fa-trash"></i></a>
+                <a href="<?= base_url('galeri/delete_foto/'). $value->id_galeri.'/'.$value->id_foto?>"  onclick="return confirm('Apakah akan hapus data?')" class="btn btn-danger btn-danger btn-xs center"><i class="fa fa-trash"></i></a>
             </div>
             <?php  }  ?>
         </div>

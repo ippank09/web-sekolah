@@ -40,6 +40,14 @@ class M_galeri extends CI_Model{
         return $this->db->get()->row();
     }
 
+    public function detail_foto($id_foto)
+    {
+        $this->db->select('*');
+        $this->db->from('tb_foto');
+        $this->db->where('id_foto', $id_foto);
+        return $this->db->get()->row();
+    }
+
     public function edit($data)
     {
         $this->db->where('id_galeri',$data['id_galeri']);
@@ -50,6 +58,12 @@ class M_galeri extends CI_Model{
     {
         $this->db->where('id_galeri',$data['id_galeri']);
         $this->db->delete('tb_galeri', $data);
+    }
+
+    public function delete_foto($data)
+    {
+        $this->db->where('id_foto',$data['id_foto']);
+        $this->db->delete('tb_foto', $data);
     }
 
 

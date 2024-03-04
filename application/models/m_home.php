@@ -51,12 +51,28 @@ class M_home extends CI_Model{
 
     public function galeri()
     {
-        $this->db->select('*');
+        $this->db->select('tb_galeri.*,count(tb_foto.id_galeri) as jml_foto');
         $this->db->from('tb_galeri');
         $this->db->join('tb_foto','tb_foto.id_galeri = tb_galeri.id_galeri','left' );
         $this->db->group_by('tb_galeri.id_galeri');
         $this->db->order_by('tb_galeri.id_galeri', 'desc');
         return $this->db->get()->result();
+    }
+
+    public function detail_galeri($id_galeri)
+    {
+        $this->db->select('*');
+        $this->db->from('tb_foto');
+        $this->db->where('id_galeri', $id_galeri);
+        $this->db->order_by('id_foto', 'desc');
+        return $this->db->get()->result();
+    }
+
+    public function nama_galeri($id_galeri){
+        $this->db->select('*');
+        $this->db->from('tb_galeri');
+        $this->db->where('id_galeri', $id_galeri);
+        return $this->db->get()->row();
     }
 
 
