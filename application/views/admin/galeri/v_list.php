@@ -27,7 +27,10 @@
                         <tr>
                             <td><?= $no++; ?></td>
                             <td><?= $value->nama_galeri?></td>
-                            <td><img src="<?= base_url('galeri_foto/'). $value->sampul;?>" width="90px" alt=""></td>
+                            <td class="text-center"><img src="<?= base_url('galeri_foto/'). $value->sampul;?>" width="90px" alt="">
+                                <br><i class="fa fa-image" > <?= $value->jml_foto; ?> Foto </i> <br>
+                                <a href="<?= base_url('galeri/add_foto/') . $value->id_galeri; ?>" class="btn btn-success btn-xs" >Tambah Foto</a>
+                            </td>
                             <td><a href="<?= base_url('galeri/edit/' . $value->id_galeri); ?>" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i></a>
                                 <a href="<?= base_url('galeri/delete/' . $value->id_galeri); ?>" onclick="return confirm('apakah data ini akan dihapus?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></a>
                             </td>
