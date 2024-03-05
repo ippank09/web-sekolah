@@ -18,14 +18,13 @@
           Profil Sekolah
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		  <a class="dropdown-item" href="<?= base_url('home/profile');?>">Profil Sekolah</a> 		
           <a class="dropdown-item" href="<?= base_url('home/guru'); ?>">Profil Guru</a>
           <a class="dropdown-item" href="<?= base_url('home/siswa'); ?>">Peserta Didik</a>
 		  <a class="dropdown-item" href="#">Sarana & Prasarana</a>
 		  <a class="dropdown-item" href="<?= base_url('home/galeri'); ?>">Ekstrakurikuler</a>
 		  <a class="dropdown-item" href="#">Pembiayaan</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
+          
       </li>
 									<li><a href="about.html">Kontak</a></li>
 									<!-- <li><a href="#">Galeri</a></li> -->

@@ -1,5 +1,9 @@
 <body>
 
+<?php 
+	$setting = $this->m_setting->detail();
+?>
+
 <div class="super_container">
 
 	<!-- Header -->

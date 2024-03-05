@@ -18,12 +18,12 @@
                                 <a href="<?= base_url('admin') ?>"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                             </li>
                             <li>
-                                <a href="<?= base_url('mapel') ?>"><i class="fa fa-bar-chart-o fa-fw"></i> Mata Pelajaran<span class="fa arrow"></span></a>
+                                <a href="<?= base_url('mapel') ?>"><i class="fa fa-address-card"></i> Mata Pelajaran<span class="fa arrow"></span></a>
                                 
                                 <!-- /.nav-second-level -->
                             </li>
                             <li>
-                                <a href="<?= base_url('guru'); ?>"><i class="fa fa-solid fa-chalkboard-user"></i> Guru</a>
+                                <a href="<?= base_url('guru'); ?>"><i class="fa fa-book"></i> Guru</a>
                             </li>
 
                             <li>
@@ -39,7 +39,11 @@
                             </li>
 
                             <li>
-                                <a href="<?= base_url('galeri'); ?>"><i class="fa fa-newspaper-o"></i> Galeri</a>
+                                <a href="<?= base_url('galeri'); ?>"><i class="fa fa-picture-o"></i> Galeri</a>
+                            </li>
+
+                            <li>
+                                <a href="<?= base_url('admin/setting'); ?>"><i class="fa fa-cog"></i> Setting</a>
                             </li>
 
                             <li>
