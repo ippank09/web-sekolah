@@ -75,5 +75,12 @@ class M_home extends CI_Model{
         return $this->db->get()->row();
     }
 
+    public function siswa(){
+        $this->db->select('*');
+        $this->db->from('tb_siswa');
+        $this->db->order_by('id_siswa', 'desc');
+        return $this->db->get()->result();
+    }
+
 
 }

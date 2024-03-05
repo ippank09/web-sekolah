@@ -19,16 +19,16 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="<?= base_url('home/guru'); ?>">Profil Guru</a>
-          <a class="dropdown-item" href="#">Peserta Didik</a>
+          <a class="dropdown-item" href="<?= base_url('home/siswa'); ?>">Peserta Didik</a>
 		  <a class="dropdown-item" href="#">Sarana & Prasarana</a>
-		  <a class="dropdown-item" href="#">Ekstrakurikuler</a>
+		  <a class="dropdown-item" href="<?= base_url('home/galeri'); ?>">Ekstrakurikuler</a>
 		  <a class="dropdown-item" href="#">Pembiayaan</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>
 									<li><a href="about.html">Kontak</a></li>
-									<li><a href="<?= base_url('home/galeri'); ?>">Galeri</a></li>
+									<!-- <li><a href="#">Galeri</a></li> -->
 									<li><a href="<?= base_url('home/berita'); ?>">Berita</a></li>
 									<!-- <li><a href="#">Page</a></li>
 									<li><a href="contact.html">Contact</a></li> -->

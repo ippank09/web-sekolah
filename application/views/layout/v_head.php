@@ -20,6 +20,8 @@
 <link rel="stylesheet" type="text/css" href="<?= base_url() ?>template/front-end/styles/blog_single_responsive.css">
 <link rel="stylesheet" type="text/css" href="<?= base_url() ?>template/front-end/styles/about.css">
 <link rel="stylesheet" type="text/css" href="<?= base_url() ?>template/front-end/styles/about_responsive.css">
+ <!-- DataTables CSS -->
+ <link rel="stylesheet" href="https://cdn.datatables.net/2.0.1/css/dataTables.dataTables.css" />
 
 
 

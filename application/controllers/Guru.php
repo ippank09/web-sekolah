@@ -68,13 +68,13 @@ class Guru extends CI_Controller
                 redirect('guru');
             }
         }
-        $data = array(
-            'title' => 'MAS',
-            'title2' => 'Add data guru',
-            'mapel' => $this->m_mapel->lists(),
-            'isi' => 'admin/guru/v_add'
-        );
-        $this->load->view('admin/layout/v_wrapper', $data, FALSE);
+            $data = array(
+                'title' => 'MAS',
+                'title2' => 'Add data guru',
+                'mapel' => $this->m_mapel->lists(),
+                'isi' => 'admin/guru/v_add'
+            );
+            $this->load->view('admin/layout/v_wrapper', $data, FALSE);
     }
 
     public function edit($id_guru)

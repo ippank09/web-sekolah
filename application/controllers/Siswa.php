@@ -36,7 +36,7 @@ class Siswa  extends CI_Controller
             $config['allowed_types']        = 'gif|jpg|png';
             $config['max_size']             = 2000;
             $this->upload->initialize($config);
-            if (!$this->upload->do_upload('foto_siswa_siswa')) {
+            if (!$this->upload->do_upload('foto_siswa')) {
 
                 $data = array(
                     'title' => 'MAS',
@@ -64,13 +64,13 @@ class Siswa  extends CI_Controller
                 redirect('siswa');
             }
         }
-        $data = array(
-            'title' => 'MAS',
-            'title2' => 'Add data siswa',
-            'siswa' => $this->m_siswa->lists(),
-            'isi' => 'admin/siswa/v_add'
-        );
-        $this->load->view('admin/layout/v_wrapper', $data, FALSE);
+                $data = array(
+                    'title' => 'MAS',
+                    'title2' => 'Add data siswa',
+                    'siswa' => $this->m_siswa->lists(),
+                    'isi' => 'admin/siswa/v_add'
+                );
+                $this->load->view('admin/layout/v_wrapper', $data, FALSE);
     }
 
     public function edit($id_siswa)

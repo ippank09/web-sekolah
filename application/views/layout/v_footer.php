@@ -107,6 +107,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	</footer>
 </div>
 
+
+
 <script src="<?= base_url() ?>template/front-end/js/jquery-3.2.1.min.js"></script>
 <script src="<?= base_url() ?>template/front-end/styles/bootstrap4/popper.js"></script>
 <script src="<?= base_url() ?>template/front-end/styles/bootstrap4/bootstrap.min.js"></script>
@@ -126,5 +128,14 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="<?= base_url() ?>template/front-end/js/courses.js"></script>
 <script src="<?= base_url() ?>template/front-end/js/blog_single.js"></script>
 <script src="<?= base_url() ?>template/front-end/js/about.js"></script>
+
+<script src="https://cdn.datatables.net/2.0.1/js/dataTables.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#mytable').DataTable();
+    });
+</script>
+
+
 </body>
 </html>

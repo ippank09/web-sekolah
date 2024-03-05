@@ -18,17 +18,7 @@
 	</div>
 
 
-    <!-- Contact -->
-
-	<div class="contact">
-		
-		<!-- Contact Map -->
-
-		
-
-		<!-- Contact Info -->
-
-		<div class="contact_info_container">
+    <!-- Siswa -->
 			<div class="container">
 				<div class="row">
                      <div class="col-lg-12 text-center">
@@ -58,8 +48,8 @@
 					<?php } ?>
 				</div>
 			</div>
-		</div>
-	</div>
+		
+	
 
     <!-- Newsletter -->
 

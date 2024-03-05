@@ -118,4 +118,15 @@ class Home extends CI_Controller {
 	  }
 
 
+	  public function siswa()
+	  {
+		$data = array(
+			'title' => 'Siswa',
+			'siswa' =>$this->m_home->siswa(),
+			'isi' =>'v_siswa'	
+		);
+		$this->load->view('layout/v_wrapper', $data, FALSE);
+	  }
+
+
 }
