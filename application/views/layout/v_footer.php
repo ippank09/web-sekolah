@@ -1,4 +1,4 @@
-<html>
+
 <!-- Footer -->
 <footer class="footer">
 		<div class="footer_background" style="background-image:url(<?= base_url() ?>template/front-end/images/footer_background.png)"></div>
@@ -130,6 +130,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="<?= base_url() ?>template/front-end/js/about.js"></script>
 
 <script src="https://cdn.datatables.net/2.0.1/js/dataTables.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
     $(document).ready(function() {
         $('#mytable').DataTable();
@@ -137,5 +138,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 </script>
 
 
+
+
 </body>
-</html>
+

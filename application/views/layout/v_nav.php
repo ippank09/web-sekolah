@@ -27,7 +27,7 @@
           
       </li>
 									<li><a href="about.html">Kontak</a></li>
-									<!-- <li><a href="#">Galeri</a></li> -->
+									<li><a href="<?= base_url('home/about'); ?>">Tentang</a></li>
 									<li><a href="<?= base_url('home/berita'); ?>">Berita</a></li>
 									<!-- <li><a href="#">Page</a></li>
 									<li><a href="contact.html">Contact</a></li> -->

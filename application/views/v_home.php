@@ -7,103 +7,30 @@
 			<div class="owl-carousel owl-theme home_slider">
 				
 				<!-- Home Slider Item -->
+				<?php foreach ($berita as $key => $value) { ?>
+					# code...
+				
 				<div class="owl-item">
-					<div class="home_slider_background" style="background-image:url(<?= base_url() ?>template/front-end/images/home_slider_1.jpg)"></div>
+					<div class="home_slider_background" style="background-image:url(<?= base_url('gambar_berita/').$value->gambar_berita ?>"></div>
 					<div class="home_slider_content">
 						<div class="container">
 							<div class="row">
 								<div class="col text-center">
-									<div class="home_slider_title">The Premium System Education</div>
-									<div class="home_slider_subtitle">Future Of Education Technology</div>
+									<div class="home_slider_title"> <a href="<?= base_url('/home/detail_berita/'.$value->slug_berita); ?>"><?= $value->judul_berita; ?>"> <?= $value->judul_berita; ?></a></div>
+									<div class="home_slider_subtitle"><p><?= substr(strip_tags($value->isi_berita),0,72); ?>....</p></div>
 									<div class="home_slider_form_container">
-										<form action="#" id="home_search_form_1" class="home_search_form d-flex flex-lg-row flex-column align-items-center justify-content-between">
-											<div class="d-flex flex-row align-items-center justify-content-start">
-												<input type="search" class="home_search_input" placeholder="Keyword Search" required="required">
-												<select class="dropdown_item_select home_search_input">
-													<option>Category Courses</option>
-													<option>Category</option>
-													<option>Category</option>
-												</select>
-												<select class="dropdown_item_select home_search_input">
-													<option>Select Price Type</option>
-													<option>Price Type</option>
-													<option>Price Type</option>
-												</select>
-											</div>
-											<button type="submit" class="home_search_button">search</button>
-										</form>
+										
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+                 <?php } ?>
+				
 
 				<!-- Home Slider Item -->
-				<div class="owl-item">
-					<div class="home_slider_background" style="background-image:url(<?= base_url() ?>template/front-end/images/home_slider_1.jpg)"></div>
-					<div class="home_slider_content">
-						<div class="container">
-							<div class="row">
-								<div class="col text-center">
-									<div class="home_slider_title">The Premium System Education</div>
-									<div class="home_slider_subtitle">Future Of Education Technology</div>
-									<div class="home_slider_form_container">
-										<form action="#" id="home_search_form_2" class="home_search_form d-flex flex-lg-row flex-column align-items-center justify-content-between">
-											<div class="d-flex flex-row align-items-center justify-content-start">
-												<input type="search" class="home_search_input" placeholder="Keyword Search" required="required">
-												<select class="dropdown_item_select home_search_input">
-													<option>Category Courses</option>
-													<option>Category</option>
-													<option>Category</option>
-												</select>
-												<select class="dropdown_item_select home_search_input">
-													<option>Select Price Type</option>
-													<option>Price Type</option>
-													<option>Price Type</option>
-												</select>
-											</div>
-											<button type="submit" class="home_search_button">search</button>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Home Slider Item -->
-				<div class="owl-item">
-					<div class="home_slider_background" style="background-image:url(<?= base_url() ?>template/front-end/images/home_slider_1.jpg)"></div>
-					<div class="home_slider_content">
-						<div class="container">
-							<div class="row">
-								<div class="col text-center">
-									<div class="home_slider_title">The Premium System Education</div>
-									<div class="home_slider_subtitle">Future Of Education Technology</div>
-									<div class="home_slider_form_container">
-										<form action="#" id="home_search_form_3" class="home_search_form d-flex flex-lg-row flex-column align-items-center justify-content-between">
-											<div class="d-flex flex-row align-items-center justify-content-start">
-												<input type="search" class="home_search_input" placeholder="Keyword Search" required="required">
-												<select class="dropdown_item_select home_search_input">
-													<option>Category Courses</option>
-													<option>Category</option>
-													<option>Category</option>
-												</select>
-												<select class="dropdown_item_select home_search_input">
-													<option>Select Price Type</option>
-													<option>Price Type</option>
-													<option>Price Type</option>
-												</select>
-											</div>
-											<button type="submit" class="home_search_button">search</button>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				
 
 			</div>
 		</div>
@@ -118,48 +45,26 @@
 			<div class="row">
 				<div class="col">
 					<div class="section_title_container text-center">
-						<h2 class="section_title">Welcome To Unicat E-Learning</h2>
-						<div class="section_subtitle"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel gravida arcu. Vestibulum feugiat, sapien ultrices fermentum congue, quam velit venenatis sem</p></div>
+						<h2 class="section_title">Selamat Datang</h2>
+						
 					</div>
 				</div>
 			</div>
 			<div class="row features_row">
-				
-				<!-- Features Item -->
+				<?php  foreach ($galeri2 as $key => $value) { ?>
+					
+								<!-- Features Item -->
 				<div class="col-lg-3 feature_col">
 					<div class="feature text-center trans_400">
-						<div class="feature_icon"><img src="<?= base_url() ?>template/front-end/images/icon_1.png" alt=""></div>
-						<h3 class="feature_title">The Experts</h3>
-						<div class="feature_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></div>
+						<div class="feature_icon"><img src="<?= base_url('galeri_foto/').$value->sampul;?>" height="100" width="100"></div>
+						
+						
 					</div>
+					<h3 class="feature_title text-center"><a href="<?= base_url('home/galeri'); ?>"><?= $value->nama_galeri; ?></a></h3>
+					<div class="feature_text text-center">Item : <?=$value->jml_foto;?></div>
 				</div>
 
-				<!-- Features Item -->
-				<div class="col-lg-3 feature_col">
-					<div class="feature text-center trans_400">
-						<div class="feature_icon"><img src="<?= base_url() ?>template/front-end/images/icon_2.png" alt=""></div>
-						<h3 class="feature_title">Book & Library</h3>
-						<div class="feature_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></div>
-					</div>
-				</div>
-
-				<!-- Features Item -->
-				<div class="col-lg-3 feature_col">
-					<div class="feature text-center trans_400">
-						<div class="feature_icon"><img src="<?= base_url() ?>template/front-end/images/icon_3.png" alt=""></div>
-						<h3 class="feature_title">Best Courses</h3>
-						<div class="feature_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></div>
-					</div>
-				</div>
-
-				<!-- Features Item -->
-				<div class="col-lg-3 feature_col">
-					<div class="feature text-center trans_400">
-						<div class="feature_icon"><img src="<?= base_url() ?>template/front-end/images/icon_4.png" alt=""></div>
-						<h3 class="feature_title">Award & Reward</h3>
-						<div class="feature_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></div>
-					</div>
-				</div>
+				<?php } ?>
 
 			</div>
 		</div>
@@ -173,93 +78,42 @@
 			<div class="row">
 				<div class="col">
 					<div class="section_title_container text-center">
-						<h2 class="section_title">Popular Online Courses</h2>
-						<div class="section_subtitle"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel gravida arcu. Vestibulum feugiat, sapien ultrices fermentum congue, quam velit venenatis sem</p></div>
+						<h2 class="section_title">Berita</h2>
+			
 					</div>
 				</div>
 			</div>
 			<div class="row courses_row">
 				
-				<!-- Course -->
+				<?php foreach ($berita as $key => $value) { ?>
+				
 				<div class="col-lg-4 course_col">
 					<div class="course">
-						<div class="course_image"><img src="<?= base_url() ?>template/front-end/images/course_1.jpg" alt=""></div>
+						<div class="course_image"><img src="<?= base_url('gambar_berita/').$value->gambar_berita ?>" alt=""></div>
 						<div class="course_body">
-							<h3 class="course_title"><a href="course.html">Software Training</a></h3>
-							<div class="course_teacher">Mr. John Taylor</div>
+							<h3 class="course_title"><a href="course.html"><?= substr(strip_tags($value->judul_berita),0,72); ?></a></h3>
+							<div class="course_teacher">Diposting oleh : <?= $value->nama_user; ?></div>
 							<div class="course_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipi elitsed do eiusmod tempor</p>
+								<p><?= substr(strip_tags($value->isi_berita),0,72); ?>...</p>
 							</div>
 						</div>
 						<div class="course_footer">
 							<div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
 								<div class="course_info">
-									<i class="fa fa-graduation-cap" aria-hidden="true"></i>
+									<i class="fa fa-calendar" aria-hidden="true"></i>
 									<span>20 Student</span>
 								</div>
-								<div class="course_info">
-									<i class="fa fa-star" aria-hidden="true"></i>
-									<span>5 Ratings</span>
-								</div>
-								<div class="course_price ml-auto">$130</div>
+								
 							</div>
 						</div>
 					</div>
 				</div>
+					<?php } ?>
+				<!-- Course -->
+				
 
 				<!-- Course -->
-				<div class="col-lg-4 course_col">
-					<div class="course">
-						<div class="course_image"><img src="<?= base_url() ?>template/front-end/images/course_2.jpg" alt=""></div>
-						<div class="course_body">
-							<h3 class="course_title"><a href="course.html">Developing Mobile Apps</a></h3>
-							<div class="course_teacher">Ms. Lucius</div>
-							<div class="course_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipi elitsed do eiusmod tempor</p>
-							</div>
-						</div>
-						<div class="course_footer">
-							<div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
-								<div class="course_info">
-									<i class="fa fa-graduation-cap" aria-hidden="true"></i>
-									<span>20 Student</span>
-								</div>
-								<div class="course_info">
-									<i class="fa fa-star" aria-hidden="true"></i>
-									<span>5 Ratings</span>
-								</div>
-								<div class="course_price ml-auto">Free</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Course -->
-				<div class="col-lg-4 course_col">
-					<div class="course">
-						<div class="course_image"><img src="<?= base_url() ?>template/front-end/images/course_3.jpg" alt=""></div>
-						<div class="course_body">
-							<h3 class="course_title"><a href="course.html">Starting a Startup</a></h3>
-							<div class="course_teacher">Mr. Charles</div>
-							<div class="course_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipi elitsed do eiusmod tempor</p>
-							</div>
-						</div>
-						<div class="course_footer">
-							<div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
-								<div class="course_info">
-									<i class="fa fa-graduation-cap" aria-hidden="true"></i>
-									<span>20 Student</span>
-								</div>
-								<div class="course_info">
-									<i class="fa fa-star" aria-hidden="true"></i>
-									<span>5 Ratings</span>
-								</div>
-								<div class="course_price ml-auto"><span>$320</span>$220</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				
 
 			</div>
 			<div class="row">
@@ -272,164 +126,11 @@
 
 	<!-- Counter -->
 
-	<div class="counter">
-		<div class="counter_background" style="background-image:url(images/counter_background.jpg)"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="counter_content">
-						<h2 class="counter_title">Register Now</h2>
-						<div class="counter_text"><p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dumy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p></div>
-
-						<!-- Milestones -->
-
-						<div class="milestones d-flex flex-md-row flex-column align-items-center justify-content-between">
-							
-							<!-- Milestone -->
-							<div class="milestone">
-								<div class="milestone_counter" data-end-value="15">0</div>
-								<div class="milestone_text">years</div>
-							</div>
-
-							<!-- Milestone -->
-							<div class="milestone">
-								<div class="milestone_counter" data-end-value="120" data-sign-after="k">0</div>
-								<div class="milestone_text">years</div>
-							</div>
-
-							<!-- Milestone -->
-							<div class="milestone">
-								<div class="milestone_counter" data-end-value="670" data-sign-after="+">0</div>
-								<div class="milestone_text">years</div>
-							</div>
-
-							<!-- Milestone -->
-							<div class="milestone">
-								<div class="milestone_counter" data-end-value="320">0</div>
-								<div class="milestone_text">years</div>
-							</div>
-
-						</div>
-					</div>
-
-				</div>
-			</div>
-
-			<div class="counter_form">
-				<div class="row fill_height">
-					<div class="col fill_height">
-						<form class="counter_form_content d-flex flex-column align-items-center justify-content-center" action="#">
-							<div class="counter_form_title">courses now</div>
-							<input type="text" class="counter_input" placeholder="Your Name:" required="required">
-							<input type="tel" class="counter_input" placeholder="Phone:" required="required">
-							<select name="counter_select" id="counter_select" class="counter_input counter_options">
-								<option>Choose Subject</option>
-								<option>Subject</option>
-								<option>Subject</option>
-								<option>Subject</option>
-							</select>
-							<textarea class="counter_input counter_text_input" placeholder="Message:" required="required"></textarea>
-							<button type="submit" class="counter_form_button">submit now</button>
-						</form>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
+	
 
 	<!-- Events -->
 
-	<div class="events">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="section_title_container text-center">
-						<h2 class="section_title">Upcoming events</h2>
-						<div class="section_subtitle"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel gravida arcu. Vestibulum feugiat, sapien ultrices fermentum congue, quam velit venenatis sem</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="row events_row">
-
-				<!-- Event -->
-				<div class="col-lg-4 event_col">
-					<div class="event event_left">
-						<div class="event_image"><img src="<?= base_url() ?>template/front-end/images/event_1.jpg" alt=""></div>
-						<div class="event_body d-flex flex-row align-items-start justify-content-start">
-							<div class="event_date">
-								<div class="d-flex flex-column align-items-center justify-content-center trans_200">
-									<div class="event_day trans_200">21</div>
-									<div class="event_month trans_200">Aug</div>
-								</div>
-							</div>
-							<div class="event_content">
-								<div class="event_title"><a href="#">Which Country Handles Student Debt?</a></div>
-								<div class="event_info_container">
-									<div class="event_info"><i class="fa fa-clock-o" aria-hidden="true"></i><span>15.00 - 19.30</span></div>
-									<div class="event_info"><i class="fa fa-map-marker" aria-hidden="true"></i><span>25 New York City</span></div>
-									<div class="event_text">
-										<p>Policy analysts generally agree on a need for reform, but not on which path...</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Event -->
-				<div class="col-lg-4 event_col">
-					<div class="event event_mid">
-						<div class="event_image"><img src="<?= base_url() ?>template/front-end/images/event_2.jpg" alt=""></div>
-						<div class="event_body d-flex flex-row align-items-start justify-content-start">
-							<div class="event_date">
-								<div class="d-flex flex-column align-items-center justify-content-center trans_200">
-									<div class="event_day trans_200">27</div>
-									<div class="event_month trans_200">Aug</div>
-								</div>
-							</div>
-							<div class="event_content">
-								<div class="event_title"><a href="#">Repaying your student loans (Winter 2017-2018)</a></div>
-								<div class="event_info_container">
-									<div class="event_info"><i class="fa fa-clock-o" aria-hidden="true"></i><span>09.00 - 17.30</span></div>
-									<div class="event_info"><i class="fa fa-map-marker" aria-hidden="true"></i><span>25 Brooklyn City</span></div>
-									<div class="event_text">
-										<p>This Consumer Action News issue covers topics now being debated before...</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Event -->
-				<div class="col-lg-4 event_col">
-					<div class="event event_right">
-						<div class="event_image"><img src="<?= base_url() ?>template/front-end/images/event_3.jpg" alt=""></div>
-						<div class="event_body d-flex flex-row align-items-start justify-content-start">
-							<div class="event_date">
-								<div class="d-flex flex-column align-items-center justify-content-center trans_200">
-									<div class="event_day trans_200">01</div>
-									<div class="event_month trans_200">Sep</div>
-								</div>
-							</div>
-							<div class="event_content">
-								<div class="event_title"><a href="#">Alternative data and financial inclusion</a></div>
-								<div class="event_info_container">
-									<div class="event_info"><i class="fa fa-clock-o" aria-hidden="true"></i><span>13.00 - 18.30</span></div>
-									<div class="event_info"><i class="fa fa-map-marker" aria-hidden="true"></i><span>25 New York City</span></div>
-									<div class="event_text">
-										<p>Policy analysts generally agree on a need for reform, but not on which path...</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
+	
 
 	<!-- Team -->
 
@@ -439,84 +140,30 @@
 			<div class="row">
 				<div class="col">
 					<div class="section_title_container text-center">
-						<h2 class="section_title">The Best Tutors in Town</h2>
-						<div class="section_subtitle"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel gravida arcu. Vestibulum feugiat, sapien ultrices fermentum congue, quam velit venenatis sem</p></div>
+						<h2 class="section_title">Guru dan Staff</h2>
+						
 					</div>
 				</div>
 			</div>
 			<div class="row team_row">
 				
 				<!-- Team Item -->
+				<?php foreach ($guruHome as $key => $value) { ?>
+					
 				<div class="col-lg-3 col-md-6 team_col">
 					<div class="team_item">
-						<div class="team_image"><img src="<?= base_url() ?>template/front-end/images/team_1.jpg" alt=""></div>
+						<div class="team_image"><img src="<?= base_url('foto/'). $value->foto; ?>" alt=""></div>
 						<div class="team_body">
-							<div class="team_title"><a href="#">Jacke Masito</a></div>
-							<div class="team_subtitle">Marketing & Management</div>
+							<div class="team_title"><a href="#"><?= $value->nama_guru; ?></a></div>
+							<div class="team_subtitle"><?= $value->nama_mapel; ?></div>
 							<div class="social_list">
-								<ul>
-									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-								</ul>
+								
 							</div>
 						</div>
 					</div>
 				</div>
-
-				<!-- Team Item -->
-				<div class="col-lg-3 col-md-6 team_col">
-					<div class="team_item">
-						<div class="team_image"><img src="<?= base_url() ?>template/front-end/images/team_2.jpg" alt=""></div>
-						<div class="team_body">
-							<div class="team_title"><a href="#">William James</a></div>
-							<div class="team_subtitle">Designer & Website</div>
-							<div class="social_list">
-								<ul>
-									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Team Item -->
-				<div class="col-lg-3 col-md-6 team_col">
-					<div class="team_item">
-						<div class="team_image"><img src="<?= base_url() ?>template/front-end/images/team_3.jpg" alt=""></div>
-						<div class="team_body">
-							<div class="team_title"><a href="#">John Tyler</a></div>
-							<div class="team_subtitle">Quantum mechanics</div>
-							<div class="social_list">
-								<ul>
-									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Team Item -->
-				<div class="col-lg-3 col-md-6 team_col">
-					<div class="team_item">
-						<div class="team_image"><img src="<?= base_url() ?>template/front-end/images/team_4.jpg" alt=""></div>
-						<div class="team_body">
-							<div class="team_title"><a href="#">Veronica Vahn</a></div>
-							<div class="team_subtitle">Math & Physics</div>
-							<div class="social_list">
-								<ul>
-									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
+		    	<?php } ?>
+				
 
 			</div>
 		</div>
@@ -524,90 +171,10 @@
 
 	<!-- Latest News -->
 
-	<div class="news">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="section_title_container text-center">
-						<h2 class="section_title">Latest News</h2>
-						<div class="section_subtitle"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel gravida arcu. Vestibulum feugiat, sapien ultrices fermentum congue, quam velit venenatis sem</p></div>
-					</div>
-				</div>
-			</div>
-			<div class="row news_row">
-				<div class="col-lg-7 news_col">
-					
-					<!-- News Post Large -->
-					<div class="news_post_large_container">
-						<div class="news_post_large">
-							<div class="news_post_image"><img src="<?= base_url() ?>template/front-end/images/news_1.jpg" alt=""></div>
-							<div class="news_post_large_title"><a href="blog_single.html">Here’s What You Need to Know About Online Testing for the ACT and SAT</a></div>
-							<div class="news_post_meta">
-								<ul>
-									<li><a href="#">admin</a></li>
-									<li><a href="#">november 11, 2017</a></li>
-								</ul>
-							</div>
-							<div class="news_post_text">
-								<p>Policy analysts generally agree on a need for reform, but not on which path policymakers should take. Can America learn anything from other nations...</p>
-							</div>
-							<div class="news_post_link"><a href="blog_single.html">read more</a></div>
-						</div>
-					</div>
-				</div>
 
-				<div class="col-lg-5 news_col">
-					<div class="news_posts_small">
 
-						<!-- News Posts Small -->
-						<div class="news_post_small">
-							<div class="news_post_small_title"><a href="blog_single.html">Home-based business insurance issue (Spring 2017 - 2018)</a></div>
-							<div class="news_post_meta">
-								<ul>
-									<li><a href="#">admin</a></li>
-									<li><a href="#">november 11, 2017</a></li>
-								</ul>
-							</div>
-						</div>
-
-						<!-- News Posts Small -->
-						<div class="news_post_small">
-							<div class="news_post_small_title"><a href="blog_single.html">2018 Fall Issue: Credit Card Comparison Site Survey (Summer 2018)</a></div>
-							<div class="news_post_meta">
-								<ul>
-									<li><a href="#">admin</a></li>
-									<li><a href="#">november 11, 2017</a></li>
-								</ul>
-							</div>
-						</div>
-
-						<!-- News Posts Small -->
-						<div class="news_post_small">
-							<div class="news_post_small_title"><a href="blog_single.html">Cuentas de cheques gratuitas una encuesta de Consumer Action</a></div>
-							<div class="news_post_meta">
-								<ul>
-									<li><a href="#">admin</a></li>
-									<li><a href="#">november 11, 2017</a></li>
-								</ul>
-							</div>
-						</div>
-
-						<!-- News Posts Small -->
-						<div class="news_post_small">
-							<div class="news_post_small_title"><a href="blog_single.html">Troubled borrowers have fewer repayment or forgiveness options</a></div>
-							<div class="news_post_meta">
-								<ul>
-									<li><a href="#">admin</a></li>
-									<li><a href="#">november 11, 2017</a></li>
-								</ul>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+ <!--Map -->
+   
 
 	<!-- Newsletter -->
 
@@ -638,4 +205,16 @@
 		</div>
 	</div>    
 
-		<!-- Home Slider Nav -->
+
+
+	<script>
+        const map = L.map('mapid').setView([-4.339978738596244, 119.8696063423992], 13);
+
+        const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+         L.marker([-4.339978738596244, 119.8696063423992]).addTo(map)
+		.bindPopup('MAS PP YASRIB LAPAJUNG').openPopup(); 
+
+    </script>

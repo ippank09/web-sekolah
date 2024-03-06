@@ -83,4 +83,14 @@ class M_home extends CI_Model{
     }
 
 
+    public function slider_berita(){
+        $this->db->select('*');
+        $this->db->from('tb_berita');
+        $this->db->join('tb_user','tb_user.id_user = tb_berita.id_user', 'left');
+        $this->db->order_by('id_berita', 'desc');
+        $this->db->limit(5);
+        return $this->db->get()->result();
+    }
+
+
 }

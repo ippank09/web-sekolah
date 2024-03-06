@@ -16,6 +16,9 @@ class Home extends CI_Controller {
 	{
 		$data = array(
 			'title' => 'Web Sekolah',
+			'berita' => $this->m_home->slider_berita(),
+			'galeri2' =>$this->m_home->galeri(),
+			'guruHome' => $this->m_home->guru(),
 			'isi' => 'v_home'
 		);
 
@@ -137,6 +140,18 @@ class Home extends CI_Controller {
 		);
 		$this->load->view('layout/v_wrapper', $data, FALSE);
 	  }
+
+	  public function about()
+	  {
+		$data = array(
+			'title' => 'Hubungi Kami',
+			 'about' =>$this->m_setting->detail(),
+			'isi' =>'v_about'	
+		);
+		$this->load->view('layout/v_wrapper', $data, FALSE);
+	  }
+
+	  
 
 
 }

@@ -39,17 +39,18 @@
                 </div>
             </div>
 
-            <div class="col-md-6">
+              <div class="col-md-6">
                 <div class="form-group">
                     <label for="">Mata Pelajaran</label>
-                    <select name="id_mapel" class="form-control" id="">
-                        <option value="">--Pilih Mata Pelajaran--</option>
+                    <select class="form-control" name="id_mapel" class="form-control" id="">
+                        <option class="form-control" value="">--Pilih Mata Pelajaran--</option>
                     <?php foreach ($mapel as $key => $value) { ?> 
-                        <option value="<?= $value->id_mapel; ?>"><?= $value->nama_mapel; ?></option>
+                        <option class="form-control" value="<?= $value->id_mapel; ?>"><?= $value->nama_mapel; ?></option>
                     <?php } ?>    
                     </select>
                 </div>
-            </div>
+              </div>
+           
 
             <div class="col-md-6">
                 <div class="form-group">

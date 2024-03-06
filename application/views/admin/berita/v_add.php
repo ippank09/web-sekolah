@@ -29,6 +29,21 @@
                 </div>
             </div>
 
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="">Nama User</label>
+                    <select name="id_user" id="" class="form-control">
+                        <option class="form-control" value="">--Pilih User--</option>
+                       
+                        <?php foreach ($user as $key => $value) { ?>
+                            <option value="<?= $value->id_user; ?>"><?= $value->nama_user; ?></option>
+                        <?php } ?>
+                    </select>
+                </div>
+            </div>
+
+            
+
             <div class="col-md-8">
                 <div class="form-group">
                     <label for="">Gambar berita</label>

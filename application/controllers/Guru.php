@@ -147,6 +147,8 @@ class Guru extends CI_Controller
                 $this->m_guru->edit($data);
                 $this->session->set_flashdata('pesan', 'Data Berhasil Dirubah!');
                 redirect('guru');
+
+                
         }
 
                 $data = array(
