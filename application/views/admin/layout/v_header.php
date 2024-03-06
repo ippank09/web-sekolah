@@ -1,4 +1,6 @@
 <body>
+
+
 <?php
     $setting = $this->m_setting->detail();
 ?>

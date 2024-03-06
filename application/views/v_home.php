@@ -8,7 +8,7 @@
 				
 				<!-- Home Slider Item -->
 				<?php foreach ($berita as $key => $value) { ?>
-					# code...
+				
 				
 				<div class="owl-item">
 					<div class="home_slider_background" style="background-image:url(<?= base_url('gambar_berita/').$value->gambar_berita ?>"></div>
@@ -174,7 +174,8 @@
 
 
  <!--Map -->
-   
+
+		   
 
 	<!-- Newsletter -->
 
@@ -187,8 +188,7 @@
 
 						<!-- Newsletter Content -->
 						<div class="newsletter_content text-lg-left text-center">
-							<div class="newsletter_title">sign up for news and offers</div>
-							<div class="newsletter_subtitle">Subcribe to lastest smartphones news & great deals we offer</div>
+							
 						</div>
 
 						<!-- Newsletter Form -->
@@ -207,14 +207,5 @@
 
 
 
-	<script>
-        const map = L.map('mapid').setView([-4.339978738596244, 119.8696063423992], 13);
 
-        const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
-
-         L.marker([-4.339978738596244, 119.8696063423992]).addTo(map)
-		.bindPopup('MAS PP YASRIB LAPAJUNG').openPopup(); 
-
-    </script>
+	

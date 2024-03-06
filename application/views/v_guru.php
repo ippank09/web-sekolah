@@ -62,8 +62,8 @@
 
 						<!-- Newsletter Content -->
 						<div class="newsletter_content text-lg-left text-center">
-							<div class="newsletter_title">sign up for news and offers</div>
-							<div class="newsletter_subtitle">Subcribe to lastest smartphones news & great deals we offer</div>
+							<!-- <div class="newsletter_title">sign up for news and offers</div>
+							<div class="newsletter_subtitle">Subcribe to lastest smartphones news & great deals we offer</div> -->
 						</div>
 
 						<!-- Newsletter Form -->

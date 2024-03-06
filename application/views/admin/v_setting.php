@@ -46,20 +46,22 @@
 <div class="col-sm-12">
     <div class="form-group">
         <label for="">Visi</label>
-        <textarea name="visi"      rows="5" class="form-control"><?= $setting->visi ?></textarea>
+        <textarea name="editor1"  id="editor" rows="5" class="form-control"><?= $setting->visi ?></textarea>
     </div>
 
     <div class="form-group">
         <label for="">Misi</label>
-        <textarea name="misi"  class="form-control"  rows="5"><?= $setting->misi ?></textarea>
+        <textarea name="misi" class="form-control"  rows="5"><?= $setting->misi ?></textarea>
     </div>
 
     <div class="form-group">
-        <label for="">Sejarah</label>
-        <textarea name="sejarah"  class="form-control" rows="5"><?= $setting->sejarah ?></textarea>
+        <label for="">Tujuan Madrasah</label>
+        <textarea name="sejarah"   class="form-control" rows="5"><?= $setting->sejarah ?></textarea>
     </div>
+
 
     <button type="submit" class="btn btn-success">UPDATE</button>
 </div>
 
 <?php echo form_close(); ?>
+
