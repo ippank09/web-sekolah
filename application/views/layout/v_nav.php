@@ -6,6 +6,7 @@
 						<div class="header_content d-flex flex-row align-items-center justify-content-start">
 							<div class="logo_container">
 								<a href="<?= base_url(); ?>">
+									<img src="<?= base_url() ?>yasrib.png" height="50px">
 									<div class="logo_text">MAS PP YASRIB <span>LAPAJUNG</span></div>
 								</a>
 							</div>
@@ -26,7 +27,7 @@
 		  <a class="dropdown-item" href="#">Pembiayaan</a>
           
       </li>
-									<li><a href="about.html">Kontak</a></li>
+									<!-- <li><a href="about.html">Kontak</a></li> -->
 									<li><a href="<?= base_url('home/about'); ?>">Tentang</a></li>
 									<li><a href="<?= base_url('home/berita'); ?>">Berita</a></li>
 									<!-- <li><a href="#">Page</a></li>

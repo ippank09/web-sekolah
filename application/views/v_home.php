@@ -16,7 +16,7 @@
 						<div class="container">
 							<div class="row">
 								<div class="col text-center">
-									<div class="home_slider_title"> <a href="<?= base_url('/home/detail_berita/'.$value->slug_berita); ?>"><?= $value->judul_berita; ?>"> <?= $value->judul_berita; ?></a></div>
+									<div class="home_slider_title"> <a href="<?= base_url('/home/detail_berita/'.$value->slug_berita); ?>"><?= $value->judul_berita; ?> <?= $value->judul_berita; ?></a></div>
 									<div class="home_slider_subtitle"><p><?= substr(strip_tags($value->isi_berita),0,72); ?>....</p></div>
 									<div class="home_slider_form_container">
 										

@@ -19,6 +19,7 @@
 							<div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
 								<ul class="top_bar_contact_list">
 									<li><div class="question">NPSN : 69733852</div></li>
+									<li><div class="question">NSM/NSS (Kemenag) : 131273120173</div></li>
 									<li>
 										<i class="fa fa-phone" aria-hidden="true"></i>
 										<div>(0484)  20123 / Hp. 085341146339</div>

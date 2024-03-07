@@ -32,7 +32,7 @@ class Home extends CI_Controller {
 			'isi' => 'v_guru'
 		);
 
-		$this->load->view('layout/v_wrapperHome', $data, FALSE);
+		$this->load->view('layout/v_wrapper', $data, FALSE);
 	}
 
 	public function berita(){

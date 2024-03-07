@@ -269,10 +269,10 @@
                 <div class="newsletter_container d-flex flex-lg-row flex-column align-items-center justify-content-start">
 
                     <!-- Newsletter Content -->
-                    <div class="newsletter_content text-lg-left text-center">
+                    <!-- <div class="newsletter_content text-lg-left text-center">
                         <div class="newsletter_title">sign up for news and offers</div>
                         <div class="newsletter_subtitle">Subcribe to lastest smartphones news & great deals we offer</div>
-                    </div>
+                    </div> -->
 
                     <!-- Newsletter Form -->
                     <div class="newsletter_form_container ml-lg-auto">

@@ -1,6 +1,7 @@
 <html lang="en">
 <head>
 <title>MAS PP YASRIB : <?= $title; ?></title>
+<link rel="icon" type="image/png" sizes="32x32" href="<?= base_url() ?>yasrib.png">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Unicat project">

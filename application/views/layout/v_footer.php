@@ -41,7 +41,8 @@
 										<ul>
 											<li>Email: Info.deercreative@gmail.com</li>
 											<li>Phone:  +(6281) </li>
-											<li>Alamat : </li>
+											<li>Alamat : Jl. Pesantren, Kel. Lapajung, Kec. Lalabata Kabupaten Soppeng</li>
+											<li>Sulawesi Selatan</li>
 										</ul>
 									</div>
 								</div>
@@ -84,7 +85,7 @@
 				<div class="col">
 					<div class="copyright d-flex flex-lg-row flex-column align-items-center justify-content-start">
 						<div class="cr_text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <i class="" aria-hidden="true"></i>  <a href="#" target="_blank">MAS PP YASRIB</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <i class="" aria-hidden="true"></i>  <a href="#" target="_blank">MAS PP YASRIB LAPAJUNG</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
 						<div class="ml-lg-auto cr_links">
 							<ul class="cr_list">
