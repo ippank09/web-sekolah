@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 07 Mar 2024 pada 20.58
+-- Waktu pembuatan: 07 Mar 2024 pada 22.13
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.1.25
 
@@ -44,7 +44,7 @@ CREATE TABLE `tb_berita` (
 INSERT INTO `tb_berita` (`id_berita`, `judul_berita`, `slug_berita`, `isi_berita`, `gambar_berita`, `tgl_berita`, `id_user`) VALUES
 (9, 'MAS PP YASRIB LAPAJUNG', NULL, '<p><strong>MAS PP YASRIB LAPAJUNG</strong> adalah salah satu satuan pendidikan dengan jenjang <a href=\"https://data.sekolah-kita.net/jenjang/MA\">MA</a> di Lapajung, Kec. Lalabata, Kab. Soppeng, Sulawesi Selatan. Dalam menjalankan kegiatannya, MAS PP YASRIB LAPAJUNG berada di bawah naungan Kementerian Agama.</p>', 'pesantren1.jpg', '2024-03-05 11:00:00', 1),
 (10, 'Pondok Pesantren Sukabumi', NULL, '<p>Pondok Pesantren Sukabumi Pondok Pesantren Sukabumi Pondok Pesantren Sukabumi Pondok Pesantren Sukabumi</p>', 'Pondok-Pesantren-Al-Matuq-Sukabumi.jpg', '2024-03-05 11:00:00', 1),
-(11, 'Pilpres 2024', NULL, '<p>Pilpres 2024</p>', 'pesantren2.jpg', '2024-03-05 11:00:00', 1);
+(11, 'Contoh 1', NULL, '<p>Pilpres 2024</p>', 'pesantren2.jpg', '2024-03-07 11:00:00', NULL);
 
 -- --------------------------------------------------------
 
