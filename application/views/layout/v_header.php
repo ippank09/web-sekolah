@@ -1,7 +1,7 @@
 <body>
 
 <?php 
-	$setting = $this->m_setting->detail();
+	$setting = $this->M_setting->detail();
 ?>
 
 <div class="super_container">

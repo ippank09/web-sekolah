@@ -84,7 +84,7 @@ class Home extends CI_Controller {
 	}
 
 
-	public function detail_berita($slug_berita)
+	public function detail_berita($slug_berita=null)
 	{
 		$data = array(
 			'title' => 'Detail_Berita',
@@ -135,7 +135,7 @@ class Home extends CI_Controller {
 	  {
 		$data = array(
 			'title' => 'Profile',
-			 'profile' =>$this->m_setting->detail(),
+			 'profile' =>$this->M_setting->detail(),
 			'isi' =>'v_profile'	
 		);
 		$this->load->view('layout/v_wrapper', $data, FALSE);
@@ -145,7 +145,7 @@ class Home extends CI_Controller {
 	  {
 		$data = array(
 			'title' => 'Hubungi Kami',
-			 'about' =>$this->m_setting->detail(),
+			 'about' =>$this->M_setting->detail(),
 			'isi' =>'v_about'	
 		);
 		$this->load->view('layout/v_wrapper', $data, FALSE);

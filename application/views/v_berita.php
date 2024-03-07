@@ -8,7 +8,7 @@
 						<div class="breadcrumbs">
 							<ul>
 								<li><a href="index.html">Home</a></li>
-								<li>Contact</li>
+								<li>Berita</li>
 							</ul>
 						</div>
 					</div>
@@ -46,7 +46,7 @@
 									</div>
 									<div class="course_footer">
 										<div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
-											<div class="course_info">
+											<!-- <div class="course_info">
 												<i class="fa fa-graduation-cap" aria-hidden="true"></i>
 												<span>20 Student</span>
 											</div>
@@ -54,7 +54,7 @@
 												<i class="fa fa-star" aria-hidden="true"></i>
 												<span>5 Ratings</span>
 											</div>
-											<div class="course_price ml-auto">$130</div>
+											<div class="course_price ml-auto">$130</div> -->
 										</div>
 									</div>
 								</div>
@@ -79,7 +79,7 @@
 					<div class="sidebar">
 
 						<!-- Categories -->
-						<div class="sidebar_section">
+						<!-- <div class="sidebar_section">
 							<div class="sidebar_section_title">Categories</div>
 							<div class="sidebar_categories">
 								<ul>
@@ -90,7 +90,7 @@
 									<li><a href="#">Programming</a></li>
 								</ul>
 							</div>
-						</div>
+						</div> -->
 
 						<!-- Latest Course -->
 						<div class="sidebar_section">
@@ -117,7 +117,7 @@
 						</div>
 
 						<!-- Tags -->
-						<div class="sidebar_section">
+						<!-- <div class="sidebar_section">
 							<div class="sidebar_section_title">Tags</div>
 							<div class="sidebar_tags">
 								<ul class="tags_list">
@@ -129,10 +129,10 @@
 									<li><a href="#">startup</a></li>
 								</ul>
 							</div>
-						</div>
+						</div> -->
 
 						<!-- Banner -->
-						<div class="sidebar_section">
+						<!-- <div class="sidebar_section">
 							<div class="sidebar_banner d-flex flex-column align-items-center justify-content-center text-center">
 								<div class="sidebar_banner_background" style="background-image:url(images/banner_1.jpg)"></div>
 								<div class="sidebar_banner_overlay"></div>
@@ -141,7 +141,7 @@
 									<div class="banner_button"><a href="#">download now</a></div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
@@ -165,8 +165,8 @@
 
 							<!-- Newsletter Content -->
 							<div class="newsletter_content text-lg-left text-center">
-								<div class="newsletter_title">sign up for news and offers</div>
-								<div class="newsletter_subtitle">Subcribe to lastest smartphones news & great deals we offer</div>
+								<!-- <div class="newsletter_title">sign up for news and offers</div>
+								<div class="newsletter_subtitle">Subcribe to lastest smartphones news & great deals we offer</div> -->
 							</div>
 
 							<!-- Newsletter Form -->

@@ -1,4 +1,3 @@
-
 <div class="panel panel-primary">
         <div class="panel-heading">
             <a href="<?= base_url('pengumuman/add'); ?>" class="btn btn-primary btn-sm" >Tambah</a>
@@ -43,3 +42,12 @@
         </div>
 
     </div>
+
+
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+            responsive: true
+        });
+    });
+</script>
