@@ -7,7 +7,7 @@ class Admin extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('m_setting');
+		$this->load->model('M_setting');
 	}
 
 	public function index()
@@ -45,7 +45,7 @@ class Admin extends CI_Controller
 				$data = array(
 					'title' => 'MAS',
 					'title2' => 'Setting',
-					'setting' => $this->m_setting->detail(),
+					'setting' => $this->M_setting->detail(),
 					'isi' => 'admin/v_setting'
 				);
 
@@ -56,7 +56,7 @@ class Admin extends CI_Controller
 				$config['source_image'] = './foto_kepsek/' . $upload_data['uploads']['file_name'];
 				$this->load->library('image_lib', $config);
 				//Hapus foto_siswa lama setting
-				$setting = $this->m_setting->detail();
+				$setting = $this->M_setting->detail();
 				if ($setting->foto_kepsek != "") {
 					unlink('./foto_kepsek/' . $setting->foto_kepsek);
 				}
@@ -72,7 +72,7 @@ class Admin extends CI_Controller
 					'sejarah'             => $this->input->post('sejarah'),
 					'foto_kepsek'         => $upload_data['uploads']['file_name']
 				);
-				$this->m_setting->save_setting($data);
+				$this->M_setting->save_setting($data);
 				$this->session->set_flashdata('pesan', 'Data Berhasil Dirubah!');
 				redirect('admin/setting');
 			}
@@ -88,7 +88,7 @@ class Admin extends CI_Controller
 					'misi'              => $this->input->post('misi'),
 					'sejarah'              => $this->input->post('sejarah')
 				);
-				$this->m_setting->save_setting($data);
+				$this->M_setting->save_setting($data);
 				$this->session->set_flashdata('pesan', 'Data Berhasil Dirubah!');
 				redirect('admin/setting');
 		}
@@ -96,7 +96,7 @@ class Admin extends CI_Controller
 			$data = array(
 				'title' => 'MAS',
 				'title2' => 'Setting',
-				'setting' => $this->m_setting->detail(),
+				'setting' => $this->M_setting->detail(),
 				'isi' => 'admin/v_setting'
 			);
 

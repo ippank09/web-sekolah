@@ -5,7 +5,7 @@ class Galeri extends CI_Controller{
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('m_galeri');
+        $this->load->model('M_galeri');
         
     }
 
@@ -14,7 +14,7 @@ class Galeri extends CI_Controller{
         $data = array(
             'title' => 'MAS',
             'title2' => 'Galeri',
-            'galeri' => $this->m_galeri->lists(),
+            'galeri' => $this->M_galeri->lists(),
             'isi' => 'admin/galeri/v_list'
         );
 
@@ -51,7 +51,7 @@ class Galeri extends CI_Controller{
                     'nama_galeri'          => $this->input->post('nama_galeri'),
                     'sampul'               => $upload_data['uploads']['file_name']
                 );
-                $this->m_galeri->add($data);
+                $this->M_galeri->add($data);
                 $this->session->set_flashdata('pesan', 'Data Berhasil Ditambahkan!');
                 redirect('galeri');
             }
@@ -59,7 +59,7 @@ class Galeri extends CI_Controller{
         $data = array(
             'title' => 'MAS',
             'title2' => 'Add data Galeri',
-            'galeri' => $this->m_galeri->lists(),
+            'galeri' => $this->M_galeri->lists(),
             'isi' => 'admin/galeri/v_add'
         );
         $this->load->view('admin/layout/v_wrapper', $data, FALSE);
@@ -82,7 +82,7 @@ class Galeri extends CI_Controller{
                     'title' => 'MAS',
                     'title2' => 'Add data Galeri',
                     'error' => $this->upload->display_errors(),
-                    'galeri' => $this->m_galeri->detail($id_galeri),
+                    'galeri' => $this->M_galeri->detail($id_galeri),
                     'isi' => 'admin/galeri/v_edit'
                 );
                 $this->load->view('admin/layout/v_wrapper', $data, FALSE);
@@ -93,7 +93,7 @@ class Galeri extends CI_Controller{
                 $this->load->library('image_lib', $config);
 
                  //Hapus foto_galeri lama galeri
-                 $galeri = $this->m_galeri->detail($id_galeri);
+                 $galeri = $this->M_galeri->detail($id_galeri);
                  if ($sampul->sampul != "") {
                      unlink('./foto_galeri/' . $galeri->sampul);
                  }
@@ -103,7 +103,7 @@ class Galeri extends CI_Controller{
                     'nama_galeri'  => $this->input->post('nama_galeri'),
                     'sampul'       => $upload_data['uploads']['file_name']
                 );
-                $this->m_galeri->edit($data);
+                $this->M_galeri->edit($data);
                 $this->session->set_flashdata('pesan', 'Data Berhasil Diedit!');
                 redirect('galeri');
             }
@@ -117,7 +117,7 @@ class Galeri extends CI_Controller{
                 'nama_galeri'   => $this->input->post('nama_galeri')
                
             );
-            $this->m_galeri->edit($data);
+            $this->M_galeri->edit($data);
             $this->session->set_flashdata('pesan', 'Data Berhasil Diedit!');
             redirect('galeri');
         }
@@ -125,7 +125,7 @@ class Galeri extends CI_Controller{
             $data = array(
                 'title' => 'MAS',
                 'title2' => 'Edit data Galeri',
-                'galeri' => $this->m_galeri->detail($id_galeri),
+                'galeri' => $this->M_galeri->detail($id_galeri),
                 'isi' => 'admin/galeri/v_edit'
             );
             $this->load->view('admin/layout/v_wrapper', $data, FALSE);
@@ -133,7 +133,7 @@ class Galeri extends CI_Controller{
 
      public function delete($id_galeri)
      {
-        $galeri = $this->m_galeri->detail($id_galeri);
+        $galeri = $this->M_galeri->detail($id_galeri);
         if ($galeri->sampul != "") {
             unlink('./galeri_foto/' . $galeri->sampul);
         }
@@ -143,7 +143,7 @@ class Galeri extends CI_Controller{
         );
 
 
-        $this->m_galeri->delete($data);
+        $this->M_galeri->delete($data);
         $this->session->set_flashdata('pesan', 'Data Berhasil Dihapus!');
         redirect('galeri');
     }
@@ -161,13 +161,13 @@ class Galeri extends CI_Controller{
             $this->upload->initialize($config);
             if (!$this->upload->do_upload('foto')) {
 
-                    $galeri = $this->m_galeri->detail($id_galeri);
+                    $galeri = $this->M_galeri->detail($id_galeri);
                     $data = array(
                         'title' => 'MAS',
                         'title2' => 'Add Foto Galeri '.$galeri->nama_galeri,
                         'error' => $this->upload->display_errors(),
                         'galeri' => $galeri,
-                        'foto'  => $this->m_galeri->lists_foto($id_galeri),
+                        'foto'  => $this->M_galeri->lists_foto($id_galeri),
                         'isi' => 'admin/galeri/v_add_foto'
                     );
                     $this->load->view('admin/layout/v_wrapper', $data, FALSE);
@@ -183,19 +183,19 @@ class Galeri extends CI_Controller{
                         'ket_foto'  => $this->input->post('ket_foto'),
                         'foto'       => $upload_data['uploads']['file_name']
                     );
-                    $this->m_galeri->add_foto($data);
+                    $this->M_galeri->add_foto($data);
                     $this->session->set_flashdata('pesan', 'Foto Berhasil ditambahkan!');
                     redirect('galeri/add_foto/'.$id_galeri);
             }
            
             
         }
-            $galeri = $this->m_galeri->detail($id_galeri);
+            $galeri = $this->M_galeri->detail($id_galeri);
             $data = array(
                 'title' => 'MAS',
                 'title2' => 'Add foto Galeri '.$galeri->nama_galeri,
                 'galeri' => $galeri,
-                'foto'  => $this->m_galeri->lists_foto($id_galeri),
+                'foto'  => $this->M_galeri->lists_foto($id_galeri),
                 'isi' => 'admin/galeri/v_add_foto'
             );
             $this->load->view('admin/layout/v_wrapper', $data, FALSE);
@@ -203,7 +203,7 @@ class Galeri extends CI_Controller{
 
     public function delete_foto($id_galeri, $id_foto)
     {
-       $foto = $this->m_galeri->detail_foto($id_foto);
+       $foto = $this->M_galeri->detail_foto($id_foto);
        if ($foto->foto != "") {
            unlink('./foto/' . $galeri->foto);
        }
@@ -213,7 +213,7 @@ class Galeri extends CI_Controller{
        );
 
 
-       $this->m_galeri->delete_foto($data);
+       $this->M_galeri->delete_foto($data);
        $this->session->set_flashdata('pesan', 'Data Berhasil Dihapus!');
        redirect('galeri/add_foto/'.$id_galeri);
    }

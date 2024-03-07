@@ -7,8 +7,8 @@ class Guru extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('m_guru');
-        $this->load->model('m_mapel');
+        $this->load->model('M_guru');
+        $this->load->model('M_mapel');
     }
 
     public function index()
@@ -16,7 +16,7 @@ class Guru extends CI_Controller
         $data = array(
             'title' => 'MAS',
             'title2' => 'Data Guru',
-            'guru' => $this->m_guru->lists(),
+            'guru' => $this->M_guru->lists(),
             'isi' => 'admin/guru/v_list'
         );
 
@@ -44,7 +44,7 @@ class Guru extends CI_Controller
                     'title' => 'MAS',
                     'title2' => 'Add data guru',
                     'error' => $this->upload->display_errors(),
-                    'mapel' => $this->m_mapel->lists(),
+                    'mapel' => $this->M_mapel->lists(),
                     'isi' => 'admin/guru/v_add'
                 );
                 $this->load->view('admin/layout/v_wrapper', $data, FALSE);
@@ -63,7 +63,7 @@ class Guru extends CI_Controller
                     'pendidikan'         => $this->input->post('pendidikan'),
                     'foto'               => $upload_data['uploads']['file_name']
                 );
-                $this->m_guru->add($data);
+                $this->M_guru->add($data);
                 $this->session->set_flashdata('pesan', 'Data Berhasil Ditambahkan!');
                 redirect('guru');
             }
@@ -71,7 +71,7 @@ class Guru extends CI_Controller
             $data = array(
                 'title' => 'MAS',
                 'title2' => 'Add data guru',
-                'mapel' => $this->m_mapel->lists(),
+                'mapel' => $this->M_mapel->lists(),
                 'isi' => 'admin/guru/v_add'
             );
             $this->load->view('admin/layout/v_wrapper', $data, FALSE);
@@ -99,8 +99,8 @@ class Guru extends CI_Controller
                     'title' => 'MAS',
                     'title2' => 'Edit data guru',
                     'error' => $this->upload->display_errors(),
-                    'guru' => $this->m_guru->detail($id_guru),
-                    'mapel' => $this->m_mapel->lists(),
+                    'guru' => $this->M_guru->detail($id_guru),
+                    'mapel' => $this->M_mapel->lists(),
                     'isi' => 'admin/guru/v_edit'
                 );
                 $this->load->view('admin/layout/v_wrapper', $data, FALSE);
@@ -110,7 +110,7 @@ class Guru extends CI_Controller
                 $config['source_image'] = './foto/' . $upload_data['uploads']['file_name'];
                 $this->load->library('image_lib', $config);
                 //Hapus foto lama guru
-                $guru = $this->m_guru->detail($id_guru);
+                $guru = $this->M_guru->detail($id_guru);
                 if ($guru->foto != "") {
                     unlink('./foto/'.$guru->foto);
                 }
@@ -125,7 +125,7 @@ class Guru extends CI_Controller
                     'pendidikan'         => $this->input->post('pendidikan'),
                     'foto'               => $upload_data['uploads']['file_name']
                 );
-                $this->m_guru->edit($data);
+                $this->M_guru->edit($data);
                 $this->session->set_flashdata('pesan', 'Data Berhasil Dirubah!');
                 redirect('guru');
             }
@@ -144,7 +144,7 @@ class Guru extends CI_Controller
                     'id_mapel'           => $this->input->post('id_mapel'),
                     'pendidikan'         => $this->input->post('pendidikan'),
                 );
-                $this->m_guru->edit($data);
+                $this->M_guru->edit($data);
                 $this->session->set_flashdata('pesan', 'Data Berhasil Dirubah!');
                 redirect('guru');
 
@@ -154,8 +154,8 @@ class Guru extends CI_Controller
                 $data = array(
                     'title' => 'MAS',
                     'title2' => 'Edit data guru',
-                    'mapel' => $this->m_mapel->lists(),
-                    'guru' => $this->m_guru->detail($id_guru),
+                    'mapel' => $this->M_mapel->lists(),
+                    'guru' => $this->M_guru->detail($id_guru),
                     'isi' => 'admin/guru/v_edit'
                 );
                 $this->load->view('admin/layout/v_wrapper', $data, FALSE);
@@ -163,7 +163,7 @@ class Guru extends CI_Controller
 
      public function delete($id_guru)
      {
-        $guru = $this->m_guru->detail($id_guru);
+        $guru = $this->M_guru->detail($id_guru);
         if ($guru->foto != "") {
             unlink('./foto/'.$guru->foto);
         }
@@ -172,7 +172,7 @@ class Guru extends CI_Controller
             'id_guru'  => $id_guru,);
         
             
-        $this->m_guru->delete($data);
+        $this->M_guru->delete($data);
         $this->session->set_flashdata('pesan', 'Data Berhasil Dihapus!');
         redirect('guru');
 

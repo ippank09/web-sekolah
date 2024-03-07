@@ -6,9 +6,9 @@ class Home extends CI_Controller {
 	public function __construct()
     {
         parent::__construct();
-        $this->load->model('m_guru');
-        $this->load->model('m_mapel');
-		$this->load->model('m_home');
+        $this->load->model('M_guru');
+        $this->load->model('M_mapel');
+		$this->load->model('M_home');
 
     }	
 
@@ -16,9 +16,9 @@ class Home extends CI_Controller {
 	{
 		$data = array(
 			'title' => 'Web Sekolah',
-			'berita' => $this->m_home->slider_berita(),
-			'galeri2' =>$this->m_home->galeri(),
-			'guruHome' => $this->m_home->guru(),
+			'berita' => $this->M_home->slider_berita(),
+			'galeri2' =>$this->M_home->galeri(),
+			'guruHome' => $this->M_home->guru(),
 			'isi' => 'v_home'
 		);
 
@@ -28,7 +28,7 @@ class Home extends CI_Controller {
 	public function guru(){
 		$data = array(
 			'title' => 'Guru',
-			'guru' => $this->m_home->guru(),
+			'guru' => $this->M_home->guru(),
 			'isi' => 'v_guru'
 		);
 
@@ -39,7 +39,7 @@ class Home extends CI_Controller {
 
 		$this->load->library('pagination');
         $config['base_url'] = base_url('home/berita');
-        $config['total_rows'] = count($this->m_home->total_berita());
+        $config['total_rows'] = count($this->M_home->total_berita());
 		$config['per_page'] = 6;
 		$config['uri_segmen'] = 3;
 
@@ -74,8 +74,8 @@ class Home extends CI_Controller {
 
 		$data = array(
 			'paginasi' => $this->pagination->create_links(),
-			'latest_berita' =>$this->m_home->latest_berita(),
-			'berita' => $this->m_home->berita($limit,$start),
+			'latest_berita' =>$this->M_home->latest_berita(),
+			'berita' => $this->M_home->berita($limit,$start),
 			'title' => 'Berita',
 			'isi' => 'v_berita'
 		);
@@ -88,8 +88,8 @@ class Home extends CI_Controller {
 	{
 		$data = array(
 			'title' => 'Detail_Berita',
-			'latest_berita' =>$this->m_home->latest_berita(),
-			'berita' => $this->m_home->detail_berita($slug_berita),
+			'latest_berita' =>$this->M_home->latest_berita(),
+			'berita' => $this->M_home->detail_berita($slug_berita),
 			'isi' => 'v_detail_berita'
 		);
 		$this->load->view('layout/v_wrapper', $data, FALSE);
@@ -103,7 +103,7 @@ class Home extends CI_Controller {
 	
 	  $data = array(
 			'title' => 'Galeri',
-			'galeri' =>$this->m_home->galeri(),
+			'galeri' =>$this->M_home->galeri(),
 			'isi' =>'v_galeri'	
 		);
 		$this->load->view('layout/v_wrapper', $data, FALSE);
@@ -113,8 +113,8 @@ class Home extends CI_Controller {
 	
 		$data = array(
 			  'title' => 'Galeri Foto',
-			  'foto' =>$this->m_home->detail_galeri($id_galeri),
-			  'nama_galeri' => $this->m_home->nama_galeri($id_galeri),
+			  'foto' =>$this->M_home->detail_galeri($id_galeri),
+			  'nama_galeri' => $this->M_home->nama_galeri($id_galeri),
 			  'isi' =>'v_detail_galeri'	
 		  );
 		  $this->load->view('layout/v_wrapper', $data, FALSE);
@@ -125,7 +125,7 @@ class Home extends CI_Controller {
 	  {
 		$data = array(
 			'title' => 'Siswa',
-			'siswa' =>$this->m_home->siswa(),
+			'siswa' =>$this->M_home->siswa(),
 			'isi' =>'v_siswa'	
 		);
 		$this->load->view('layout/v_wrapper', $data, FALSE);
